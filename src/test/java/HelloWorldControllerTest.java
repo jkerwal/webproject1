@@ -18,7 +18,7 @@ public class HelloWorldControllerTest {
 	public void testAppStarted() {
 
 	    WebDriver driver = new HtmlUnitDriver();
-	    driver.get("http://localhost:8080/HelloWorld/");
+	    driver.get("http://localhost:8081/HelloWorld/");
 	    // Check that the login page is shown
 	    assertEquals("Spring 4 MVC - HelloWorld Index Page", driver.getTitle());
 	}
