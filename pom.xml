@@ -74,7 +74,7 @@
 					<artifactId>tomcat7-maven-plugin</artifactId>
 					<version>2.2</version>
 					<configuration>
-						<url>http://localhost:8081/manager/text</url>
+						<url>http://localhost:8080/manager/text</url>
 						<server>TomcatServer</server>
 						<path>/</path>
 					</configuration>
@@ -91,35 +91,6 @@
             <properties></properties>
     </profile>
         
-    <profile>
-    <id>QA_staging</id>
-            <build>
-                <defaultGoal>clean install</defaultGoal>
-                <finalName>HelloWorld</finalName>
-                <resources></resources>
-                <testResources></testResources>
-                <plugins>
-                <plugin>
-					<groupId>org.apache.tomcat.maven</groupId>
-					<artifactId>tomcat7-maven-plugin</artifactId>
-					<version>2.2</version>
-					<configuration>
-						<url>http://localhost:8081/manager/text</url>
-						<server>TomcatServer</server>
-						<path>/</path>
-					</configuration>
-				</plugin>
-				</plugins>
-            </build>
-            <reporting></reporting>
-            <modules></modules>
-            <dependencies></dependencies>
-            <dependencyManagement></dependencyManagement>
-            <distributionManagement></distributionManagement>
-            <repositories></repositories>
-            <pluginRepositories></pluginRepositories>
-            <properties></properties>
-        </profile>
-  </profiles>    
+      
 	
 </project>
