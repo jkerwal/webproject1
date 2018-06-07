@@ -14,7 +14,7 @@ public class HelloWorldControllerTest {
 
 	
 
-	@Test
+	//@Test
 	public void testAppStarted() {
 
 	    WebDriver driver = new HtmlUnitDriver();
