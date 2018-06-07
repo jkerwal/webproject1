@@ -18,7 +18,8 @@ public class HelloWorldControllerTest {
 
 	@Test
 	public void testAppStarted() throws IOException {
-		String content = new String(Files.readAllBytes(Paths.get("/var/lib/jenkins/ec2_ip.txt")));
+	    String content = new String(Files.readAllBytes(Paths.get("/var/lib/jenkins/ec2_ip.txt")));
+	    System.out.println("Test IP Address: "+content);
 	    WebDriver driver = new HtmlUnitDriver();
 	    driver.get("http://"+content.trim()+":8080/HelloWorld/");
 	    // Check that the login page is shown
