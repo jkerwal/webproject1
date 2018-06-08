@@ -64,28 +64,40 @@
 	<finalName>HelloWorld</finalName>
 	<plugins>
 	 
-      <plugin>
-    <artifactId>maven-resources-plugin</artifactId>
-    <version>2.5</version>
-    <executions>
-        <execution>
-            <phase>process-test-classes</phase>
-            <id>test-classes</id>
-            <goals>
-                <goal>copy-resources</goal>
-            </goals>
-            <configuration>
-                <overwrite>false</overwrite>
-                <outputDirectory>${project.build.directory}/${project.build.finalName}/WEB-INF/classes</outputDirectory>
-                <resources>
-                    <resource>
-                        <directory>${project.build.directory}/test-classes</directory>
-                    </resource>
-                </resources>
-            </configuration>
-        </execution>
-    </executions>
-</plugin>
+	    <plugin>
+	    <artifactId>maven-resources-plugin</artifactId>
+	    <version>2.5</version>
+	    <executions>
+		<execution>
+		    <phase>process-test-classes</phase>
+		    <id>test-classes</id>
+		    <goals>
+			<goal>copy-resources</goal>
+		    </goals>
+		    <configuration>
+			<overwrite>false</overwrite>
+			<outputDirectory>${project.build.directory}/${project.build.finalName}/WEB-INF/classes</outputDirectory>
+			<resources>
+			    <resource>
+				<directory>${project.build.directory}/test-classes</directory>
+			    </resource>
+			</resources>
+		    </configuration>
+		</execution>
+	    </executions>
+	</plugin>
+	<plugin>
+		<groupId>org.apache.tomcat.maven</groupId>
+		<artifactId>tomcat7-maven-plugin</artifactId>
+		<version>2.2</version>
+		<configuration>
+			<url>http://localhost:8080/manager/text</url>
+			<server>TomcatServer</server>
+			<path>/HelloWorld</path>
+			<username>jyoti</username>
+			<password>jyoti</password>
+		</configuration>
+	</plugin>
      </plugins>
 		
 </build>
